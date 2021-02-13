@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>
+         JS String Methods - Others
+      </title>
+   </head>
+
+   <body>
+      <h3> match function </h3>
+      <p id="str1"></p>
+
+      <h3>replace function</h3> 
+      <p id="str2"></p>
+
+      <h3>slice function</h3> 
+      <p id="str3"></p>
+
+      <h3>split function</h3> 
+      <p id="str4"></p>
+ 
+      <h3>substr function</h3> 
+      <p id="str5"></p>
+
+      <h3>substring function</h3> 
+      <p id="str6"></p>
+
+      <script>
+          var str= "BOARDINFINITY is the company name. U are part of BOARDINFINITY";
+          var found = str.match(/BOARD/g);
+          document.getElementById('str1').innerHTML = found;
+
+          var re_place = /good/gi;
+          var str = "BOARDINFINITY is a good company";
+          var newstr = str.replace(re_place, "awesome");
+          document.getElementById('str2').innerHTML = newstr;
+
+          var str = "BOARDINFINITY is a good company";
+          var sliced = str.slice(3, -2);
+          document.getElementById('str3').innerHTML = sliced;
+
+          var str = "BOARDINFINITY is a good company ";
+          var splitted = str.split(" ", 5);
+          document.getElementById('str4').innerHTML = splitted;
+
+          var str = "BOARDINFINITY is a good company";
+          document.getElementById('str5').innerHTML = str.substr(1, 7);
+
+          var str = "BOARDINFINITY is a good company";
+          document.getElementById('str6').innerHTML = str.substring(1, 7);
+
+      </script>
+   </body>
+
+   </html>
